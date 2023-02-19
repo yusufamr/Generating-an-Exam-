@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question with Answers</title>
+    <style>
+      /* CSS styling for the page */
+      body {
+        font-family: Arial, sans-serif;
+        /* background-color: #f1f1f1; */
+      }
+      h1 {
+        font-size: 36px;
+        text-align: center;
+        margin-top: 50px;
+      }
+      h3{
+        display: inline;
+      }
+      p{
+        /* display: inline; */
+        float:right;
+      }
+      .question {
+        background-color: lightgray;
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 30px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      }
+      .answer {
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #ddd;
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Question with Answers</h1>
+    <hr/>
+    <div class="question">
+    {% for x in ques%}
+      
+      <h3>{{x.question}}</h3> <p id="diff">Difficulty:{{x.difficulty}} , Objective:{{x.objective}}</p>
+      <div class="answer">{{x.correctChoice}}</div>
+      <div class="answer">{{x.wrongChoice1}}</div>
+      <div class="answer">{{x.wrongChoice1}}</div>
+      
+      {% endfor %}
+      
+    </div>
+  </body>
+  <script>
+    
+  </script>
+</html>
